@@ -3,7 +3,7 @@ This will be a guided project. Guided projects are hands on training. You follow
 Resources:
 -Chris Greer https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ
 -https://www.wireshark.org/docs/
-https://parrotsec.org/download/
+-https://parrotsec.org/download/
 
 Environment:
 -ParrotOS HTB in Virtualbox
