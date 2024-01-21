@@ -33,3 +33,10 @@ After https://imgur.com/HpEfCzq
 Before https://imgur.com/BCEpvBh
 After https://imgur.com/CBnjDjS
 
+4. Adjust Wireshark layout
+   There is many ways to adjust the layout of your Wireshark based on how you want to view your packet detail, packets bytes, etc. I'll click on Edit at the top right and click on Preferences. Then click Appearance on the right side and select Layout. You can adjust the layout of your Wireshark the way you want it, and click OK.  
+
+https://imgur.com/edV8HUB
+https://imgur.com/eShb30j
+My preference https://imgur.com/gDCvx2B
+
