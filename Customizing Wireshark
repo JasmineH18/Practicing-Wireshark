@@ -1,11 +1,24 @@
-This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing to improve your skills on a certain subject. Below are the resources and environments I'm using.
+  This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing on your software, hardware, etc. This will improve your skills on a certain subject. Below are the resources and environments I'm using.
 
-Resources:
+Resources Used:
 -Chris Greer https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ
 -https://www.wireshark.org/docs/
 -https://parrotsec.org/download/
 
-Environments:
+Environments Used:
 -ParrotOS HTB in Virtualbox
 
-I will be using Wireshark on ParrotOS Hack the Box virtual machine. I mainly use Virtualbox for all my virtual machines. 
+  I will be using Wireshark on ParrotOS Hack the Box virtual machine. I mainly use Virtualbox for all my virtual machines. This project would be on customizing wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
+(Cloudshark sample trace file) https://imgur.com/FqFTaau
+On Wireshark, clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
+
+1. Setup a profile
+  A profile is a set of configurations or settings. Example: Troubleshoting TCP, you can set the filters, columns, coloring for that protocol. Wireshark profile is automatically set to default. You can see which profile you are on at the bottom right.
+  To create a profile, you would right click Profile: Default and click New. I'll name the profile 'Wireshark masterclass' and click OK. At the bottom right, it will show the profile I created. If I wanted to switch to a different profile, I would right click Profile: Wireshark Masterclass, and click Switch to. You can select which profile you want to switch. Below are screenshots I provided.
+
+https://imgur.com/QFJNmHy
+https://imgur.com/TErtCs0
+https://imgur.com/FPh3idh
+https://imgur.com/j0zjTMw
+
+2.
