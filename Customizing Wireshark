@@ -66,3 +66,6 @@ https://imgur.com/f8wY97O
 https://imgur.com/yRXWX7W
 
 8. Add Columns
+ If it comes to a point of having to view extra details from a packet, you can add columns. I'll select the first packet and the Transmission Control Protocol. Select and right click TCP Segment Len, and click Apply as Column. TCP Segment Len is how much data is encompass in the payload. The new column should appear at the top. Another way to add column is through Preferences in the Appearance section, but this is the long way to add columns.
+
+https://imgur.com/tOLFkt1
