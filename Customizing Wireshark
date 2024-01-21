@@ -34,9 +34,16 @@ Before https://imgur.com/BCEpvBh
 After https://imgur.com/CBnjDjS
 
 4. Adjust Wireshark layout
-   There is many ways to adjust the layout of your Wireshark based on how you want to view your packet detail, packets bytes, etc. I'll click on Edit at the top right and click on Preferences. Then click Appearance on the right side and select Layout. You can adjust the layout of your Wireshark the way you want it, and click OK.  
+  There is many ways to adjust the layout of your Wireshark based on how you want to view your packet detail, packets bytes, etc. I'll click on Edit at the top right and click on Preferences. Then click Appearance on the right side and select Layout. You can adjust the layout of your Wireshark the way you want it, and click OK. 
+  Tip: If you select the option for Packet Diagram, you can pull the values from the Packet Details to the diagram. Right the diagram > click Show Field Values. It's show all the information. 
 
 https://imgur.com/edV8HUB
 https://imgur.com/eShb30j
 My preference https://imgur.com/gDCvx2B
+https://imgur.com/hoxhaiL
 
+5. Add Delta Time Column and adjust Time column
+  Every packet head needs to know how to read and use Delta time column. You go to Preferences and go to Appearance. Then click on the plus icon at the bottom, type Delta, and change dropdown Type to Display Time Display. Drag the Delta to put it under Time and click OK. Time column is a adjustable time column. It can be a year, month, time of day, etc. To adjust the time, you would go to View tab at the top. Go to Time Display Format and you can choose any option that best fit for you. 
+
+Delta Time https://imgur.com/Ffc2Y4c
+Time https://imgur.com/KaTDf8Z
