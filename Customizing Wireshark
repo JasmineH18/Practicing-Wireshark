@@ -56,3 +56,13 @@ https://imgur.com/0g9vkBA
 https://imgur.com/BjUHNCi
 How my color looks https://imgur.com/8CkzBnx
 Refresh Button https://imgur.com/drNPTTX
+
+7. Create a button to set a filter (Example: TCP SYN)
+  Creating a button makes it easier to view the certain packets from a trace file. I'll select the first packet. Go to the packet details and click the Transmission Control Protocol dropdown. Look for Flags and click the dropdown. Select the SYN and right click it. Go to Prepare as Filter and click Selected. The Display filter will appear the top. Click the arrow point to the right to apply the selected display filter. This is the way to know what the disply filter you need and easier to create a button from it. I'll click the plus button and type the Lable name to 'TCP SYN'. The Filter is already filled in from when I prepared the selected filter. After clicking OK, the TCP SYN button would appear next to the plus button.  
+  Tip: If unsure what displays filters you need, you can navigate through the packet details. Right click any area you need, click Prepare as Filter, and click Selected. This will show the display filter at the top. 
+
+https://imgur.com/dTQIeRt
+https://imgur.com/f8wY97O
+https://imgur.com/yRXWX7W
+
+8. Add Columns
