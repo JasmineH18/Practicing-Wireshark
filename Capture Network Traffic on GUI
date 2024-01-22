@@ -1,0 +1,35 @@
+This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing on your software, hardware, etc. This will improve your skills on a certain subject. Below are the resources and environments I'm using.
+
+Resources Used:
+-Chris Greer https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ
+-https://www.wireshark.org/docs/
+-https://parrotsec.org/download/
+
+Environments Used:
+-ParrotOS HTB in Virtualbox
+
+  I will be using Wireshark on ParrotOS Hack the Box virtual machine. I mainly use Virtualbox for all my virtual machines. This project would be on how to capture network traffic on graphical user interface. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
+(Cloudshark sample trace file) https://imgur.com/FqFTaau
+On Wireshark, clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
+
+Wireshark needs to use packet drives to capture packets. To view which packet driver your Wireshark will use, it'll be locate in 'About Wireshark'. My About Wireshark is located in the Help tab and click About Wireshark. My packet drive is libcap 1.10.3 with TPACKET_V3. If your main Wireshark interface is empty, it means you don't have a packet drive installed or you don't have admin access. Screenshots provided below.
+
+https://imgur.com/NNGpU60
+https://imgur.com/bEa4BRb
+
+You can see your physical and/or virtual interfaces on your main Wireshark interface. To see traffic, you could capture using a WiFi, physical interface, etc. The lines won't be flat, after you capture the network traffic.
+
+My interfaces https://imgur.com/GP4raGD
+
+You view more details of your interfaces in the Capture Option. Click on the gear icon at the top to see the interface details. If you don't want to use all the interfaces, and you have the option to select which interface you'll use. You would click Managed Services and it should let you select which interfaces to capture. 
+
+Access Capture Option https://imgur.com/bglx3M8
+https://imgur.com/sW9yA7l
+
+From the interface details there is Snaplen. If you don't want to capture the entire payload, Snaplen can capture a certain amount of data per frame. It could be first 64 bytes or more of the frame, and best to avoid under capture. Next to Snaplen is Buffer, which is 2 megabytes of kernel buffer for our capture process. You would only adjust buffer if you are in a high environment throughput. There's an option called 'Enabled promiscuous mode on all interfaces' at the bottom right. It allows wireshark to capture traffic and from other machines that are unicasting traffice between each other.
+
+https://imgur.com/fc00owi
+
+
+
+
