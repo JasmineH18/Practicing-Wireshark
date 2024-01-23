@@ -26,9 +26,17 @@ You view more details of your interfaces in the Capture Option. Click on the gea
 Access Capture Option https://imgur.com/bglx3M8
 https://imgur.com/sW9yA7l
 
-From the interface details there is Snaplen. If you don't want to capture the entire payload, Snaplen can capture a certain amount of data per frame. It could be first 64 bytes or more of the frame, and best to avoid under capture. Next to Snaplen is Buffer, which is 2 megabytes of kernel buffer for our capture process. You would only adjust buffer if you are in a high environment throughput. There's an option called 'Enabled promiscuous mode on all interfaces' at the bottom right. It allows wireshark to capture traffic and from other machines that are unicasting traffice between each other.
+Focusing on the Input tab. From the interface details there is Snaplen. If you don't want to capture the entire payload, Snaplen can capture a certain amount of data per frame. It could be first 64 bytes or more of the frame, and best to avoid under capture. Next to Snaplen is Buffer, which is 2 megabytes of kernel buffer for our capture process. You would only adjust buffer if you are in a high environment throughput. There's an option called 'Enabled promiscuous mode on all interfaces' at the bottom right. It allows wireshark to capture traffic and from other machines that are unicasting traffice between each other.
 
 https://imgur.com/fc00owi
+
+The Output tab allows you to configure that you want Wireshark to save to and allows me to configure some other settings that can make Wireshark traffic easier to read. You can configure a long term capture instead of having a large pcap that takes time to run. It's best to capture smaller pcaps just in case there's a problem, and you can look at the small pcap where the issue occurred. To configure, you would click 'Browse' and select the location to save the capture file. I'll be naming the file 'test.pcapng', and click 'Save'. The file location should appear. Make sure the 'Output format' is set to 'pcapng'. Select 'Create a new file automatically' and this allows you to set amount of time you want to capture or number of packets you want to capture. I'll be selecting the second 'After', type 500, and selecting 'megabytes'. This create a new packet capture after 500 megabytes and will continue until your hard drive is filled. If you don't want to fill your hard drive with pcaps, select the option 'Use a ring buffer with' and how many files. I'll type 10. You would have 10 500 megabytes files. After the 10th file, it will overwrite the first file and keeps ging to the next. Click 'Start'. If your 'Start' button is greyed out, you need to select an interface from the 'Input' tab.   
+
+https://imgur.com/LHpuIhM
+https://imgur.com/qIzE6o7
+
+
+
 
 
 
