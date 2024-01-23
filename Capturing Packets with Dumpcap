@@ -1,0 +1,11 @@
+This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing on your software, hardware, etc. This will improve your skills on a certain subject. Below are the resources and environments I'm using.
+
+Resources Used:
+-Chris Greer https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ
+-https://www.wireshark.org/docs/
+-https://parrotsec.org/download/
+
+Environments Used:
+-ParrotOS HTB in Virtualbox
+
+  I will be using Wireshark on ParrotOS Hack the Box virtual machine. I mainly use Virtualbox for all my virtual machines. This project would be on how to capture packets with Dumpcap. 
