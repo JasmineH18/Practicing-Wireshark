@@ -1,0 +1,31 @@
+This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing on your software, hardware, etc. This will improve your skills on a certain subject. Below are the resources and environments I'm using.  
+
+Resources Used:
+-Chris Greer https://www.youtube.com/watch?v=DAtyzE1TUlI&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ&index=3
+-https://www.wireshark.org/docs/
+-https://parrotsec.org/download/
+
+Environments Used:
+-ParrotOS HTB in Virtualbox
+
+   I will be using Wireshark on ParrotOS Hack the Box virtual machine. I mainly use Virtualbox for all my virtual machines. This project will focus on capturing packets with dumpcap and tcpdump in the Command Line.
+
+Capture packets with dumpcap
+
+You can install windows 10 installation media on VMWare, Virtualbox, etc. Windows 10 link (https://www.microsoft.com/en-us/software-download/windows10) and how to, video starts 4:50 (https://www.youtube.com/watch?v=kku0fVfksrk). After the virtual machine setup, you would download Wireshark (https://www.wireshark.org/download.html). Export and save Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb).
+
+In Windows, you would need to access Command prompt from the Start menu. Make sure to have the Wireshark directory path.
+
+Add the Wireshark directory path:
+1. In the Command prompt, go to the root folder. Type 'cd /' > 'cd program files' > and then cd wireshark.
+2. Type 'dir' and you should see the command line tools. Scroll down and you'll see the path. C:\Program Files\Wireshark>. You can type 'Path'.
+3. To save the path, Go to control Panel > System > Advanced System Settings > Environment Variables > Click 'Edit' and 'New' > Click 'Browse' and find the Wireshark directory > Click OK
+
+In the Command Prompt/Terminal in the Wireshark path, type 'dumpcap -h'. You should see all the option you can do with dumpcap. -i will tell the system which interface you want to capture from. 
+
+Capture packets with tcpdump
+
+
+
+
+
