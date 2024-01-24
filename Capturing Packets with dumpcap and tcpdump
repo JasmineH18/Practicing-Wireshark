@@ -21,7 +21,8 @@ Add the Wireshark directory path:
 2. Type 'dir' and you should see the command line tools. Scroll down and you'll see the path. C:\Program Files\Wireshark>. You can type 'Path'.
 3. To save the path, Go to control Panel > System > Advanced System Settings > Environment Variables > Click 'Edit' and 'New' > Click 'Browse' and find the Wireshark directory > Click OK
 
-In the Command Prompt/Terminal in the Wireshark path, type 'dumpcap -h'. You should see all the option you can do with dumpcap. -i will tell the system which interface you want to capture from. 
+In the Command Prompt/Terminal in the Wireshark path, type 'dumpcap -h'. You should see all the option you can do with dumpcap. -i will tell the system which interface you want to capture from. Type 'dumpcap -D' to see your list of interfaces on your system, and it shows the index number for it. Example: Type dumpcap -i 1. I chose the first interface with the index '1'. Hit 'Enter' and you should see it start capturing that interface. Press 'CTRL + C' to stop the capture. You can tell dumpcap where to save the data. It's best not to save it in the TMP folder as it stores data temporarily. Type 'dumpcap -i 1 -w <file name location of your choice>' and press enter. It will continue to capture to that file until you stop it with 'CTRL + C'. You can view it on GUI to see that file you saved to. You can break the capture packets into smaller pieces using a ring buffer. Type 'dumpcap -i 1 -w <file name location> -b filesize:500000 -b files:10'. The file size would be 500 megabyte pcap and save 10 500 megabyte for the amount in the ring buffer.           
+
 
 Capture packets with tcpdump
 
