@@ -1,1 +1,35 @@
+This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing on your software, hardware, etc. This will improve your skills on a certain subject. Below are the resources and environments I'm using.
+
+Resources Used:
+-Chris Greer https://www.youtube.com/watch?v=-HDpYR_QSFw&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ&index=5
+-https://www.wireshark.org/docs/
+-https://parrotsec.org/download/
+-https://www.cloudshark.org/captures/e6fb36096dbb
+
+Environments Used:
+-ParrotOS HTB in Virtualbox
+
+   I will be using Wireshark on ParrotOS Hack the Box virtual machine. This project would be on how to capture network traffic on graphical user interface. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM.
+(Cloudshark sample trace file) https://imgur.com/FqFTaau
+On Wireshark, clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
+
+Capture Filter: Pre-filtering
+Only capture a certain type of traffic. It's best to not rely on setting a filter as you may miss an incident. Screenshot https://imgur.com/B8bK5OU
+
+Examples: 
+Example 1: Search for a port, by typing 'port 443'
+Example 2: User ip address, by typing 'host 192.0.2.1'
+
+Display Filter: Post filtering
+Filter for packets you already capture. Screenshot https://imgur.com/jlURnEL
+
+Examples: 
+Example 1: Search for all ip's, by typing 'ip'. Screenshot https://imgur.com/RNQu6gO
+Example 2: To and from a specifc address, by typing 'ip.addr == 172.67.75.39'
+Example 3: Search for a conversation to and from a specific server. Right click a packet > Coversation filter > Select one of the options. https://imgur.com/JUHZqtD
+Example 4: You can add things to the filter. ip.addr eq 172.67.75.39 and ip.addr eq 192.168.0.46 to (ip.addr eq 172.67.75.39 and ip.addr eq 192.168.0.46) and tcp. Before https://imgur.com/nyay3xc, After https://imgur.com/gwsmPC4
+Example 5: Another way to add filter. Select any packet > Go to 'Transmission Control Protocol' and right it > Prepare as Filter > select 'And select'
+
+
+
 
