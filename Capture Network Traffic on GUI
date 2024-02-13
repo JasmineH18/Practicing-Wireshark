@@ -10,6 +10,8 @@ Environments Used:
 -ParrotOS HTB in Virtualbox
 
   I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on how to capture network traffic on graphical user interface.  
+(Cloudshark sample trace file) https://imgur.com/FqFTaau
+On Wireshark, clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
 
 Wireshark needs to use packet drives to capture packets. To view which packet driver your Wireshark will use, it'll be locate in 'About Wireshark'. My About Wireshark is located in the Help tab and click About Wireshark. My packet drive is libcap 1.10.3 with TPACKET_V3. If your main Wireshark interface is empty, it means you don't have a packet drive installed or you don't have admin access. Screenshots provided below.
 
