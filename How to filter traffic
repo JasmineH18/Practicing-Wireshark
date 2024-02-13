@@ -26,11 +26,19 @@ Filter for packets you already capture. Screenshot https://imgur.com/jlURnEL
 
 Examples: 
 Example 1: Search for all ip's, by typing 'ip'. Screenshot https://imgur.com/RNQu6gO
+
 Example 2: To and from a specifc address, by typing 'ip.addr == 172.67.75.39'
+
 Example 3: Search for a conversation to and from a specific server. Right click a packet > Coversation filter > Select one of the options. https://imgur.com/JUHZqtD
+
 Example 4: You can add things to the filter. ip.addr eq 172.67.75.39 and ip.addr eq 192.168.0.46 to (ip.addr eq 172.67.75.39 and ip.addr eq 192.168.0.46) and tcp. Before https://imgur.com/nyay3xc, After https://imgur.com/gwsmPC4
+
 Example 5: Another way to add filter. Select any packet > Go to 'Transmission Control Protocol' and right it > Prepare as Filter > select 'And select'. Screenshot https://imgur.com/oz1lxHN
+
 Example 6: Remove things you don't need, by typing 'not arp'. You can add on to that filter. Typed, not (arp or ipv4). Another, not (arp or ipv4 or sccp). Screenshot https://imgur.com/Smn1OYU
+
 Example 7: Filter TCP conversation by different ports. Typed, tcp.port in {53 443 21}
+
 Example 8: Filter for a text string. Typed, frame contains edge. Lower case and upper case does matter when filtering for a text string. Using 'contains' is very specific. You would use 'matches' for it to be case insensitive. By typing 'frame matches Edge'.
+
 
