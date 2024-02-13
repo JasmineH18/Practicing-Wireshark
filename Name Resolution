@@ -32,8 +32,25 @@ Checked screenshot: https://imgur.com/ivvtq99
 2. Resolving IP and IPv6 Addresses
 You can name the IP and IPv6 addresses. 
 
-Resolve network (IP) addresses: If checked and you hover on 'Resolve network (IP) addresses', it'll show "The next set of boxes determines how name resolution should be performed". It can use the captured DNS packet data and/or your system's DNS settings for name resolution. Another option is custom list of DNS servers for name resolution.  
+Resolve network (IP) addresses: If checked and you hover on 'Resolve network (IP) addresses', it'll show "The next set of boxes determines how name resolution should be performed". It can use the captured DNS packet data and/or your system's DNS settings for name resolution. Another option is custom list of DNS servers for name resolution. Screenshot https://imgur.com/IvAFEuJ. Example: www.google.com A 172.217.8.68, screenshot source Chris Greer https://imgur.com/O5CG0NM.  
 
+To take a closer look at the hosts that are resolved in this trace. Got to 'Statistics' tab > 'Resolved Addresses' > Change the entries to host. It'll show addresses and names that Wireshark will use within this trace file.
+
+Screenshots: https://imgur.com/1acsdbY, https://imgur.com/tsScwTL
+
+
+3. Manually configuring host names
+You can name private addresses.
+
+Selected a packet file with a private address > Right clicked the private address > Clicked 'Edit Resolved Name' > Named the address 'Client' > Clicked 'OK' > Got to 'Statistics' tab > 'Resolved Addresses' > Change the entries to host. 
+
+Note: If I wanted to remove the name 'Client', I would right clicked 'Client' > Clicked 'Edit Resolved Name' > Removed 'Client' > Clicked 'OK' 
+
+Screenshots: https://imgur.com/ad5kt6f, https://imgur.com/nUWM75Q, https://imgur.com/FNEp0c2, https://imgur.com/1acsdbY, https://imgur.com/2LwJZRh
+
+When it's appended using the pcapng file format for this packet capture, send it to someone and you resolved IP addresses, both you and the person would able to view the 'Client'. Go to 'View' tab > 'Reload as File Format/Capture' > Clicked 'Save' > Clicked the dropdown arrow for 'PCAPNG File Format' > Clicked the dropdown arrow for 'Block: Name Resolution Block' > Clicked the dropdown arrow for 'Block Data' > Clicked the dropdown arrow for 'Record: IPv4 Record = Client'. It'll show the name I configured, the IP addresses I found within this trace file, and the associated DNS names. You can save it part of this trace file.    
+
+Screenshots: https://imgur.com/EwfptFY, https://imgur.com/ESWXFJ4, https://imgur.com/utDkywI
 
 
 
