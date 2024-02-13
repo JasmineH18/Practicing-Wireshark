@@ -11,3 +11,5 @@ Environments Used:
 -ParrotOS HTB in Virtualbox
 
   I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on name resolution in Wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
+(Cloudshark sample trace file) https://imgur.com/FqFTaau
+On Wireshark: clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
