@@ -4,11 +4,12 @@ Resources Used:
 -Chris Greer https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ
 -https://www.wireshark.org/docs/
 -https://parrotsec.org/download/
+-https://www.virtualbox.org/wiki/Downloads
 
 Environments Used:
 -ParrotOS HTB in Virtualbox
 
-  I will be using Wireshark on ParrotOS Hack the Box virtual machine. I mainly use Virtualbox for all my virtual machines. This project would be on customizing wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
+  I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on customizing wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
 (Cloudshark sample trace file) https://imgur.com/FqFTaau
 On Wireshark, clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
 
