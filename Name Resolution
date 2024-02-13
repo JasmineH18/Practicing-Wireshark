@@ -29,4 +29,12 @@ Unchecked screenshot: https://imgur.com/gZ4RGd5
 Checked screenshot: https://imgur.com/ivvtq99
 
 
+2. Resolving IP and IPv6 Addresses
+You can name the IP and IPv6 addresses. 
+
+Resolve network (IP) addresses: If checked and you hover on 'Resolve network (IP) addresses', it'll show "The next set of boxes determines how name resolution should be performed". It can use the captured DNS packet data and/or your system's DNS settings for name resolution. Another option is custom list of DNS servers for name resolution.  
+
+
+
+
 
