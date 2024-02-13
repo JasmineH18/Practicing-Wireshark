@@ -4,18 +4,29 @@ Resources Used:
 -Chris Greer https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ
 -https://www.wireshark.org/docs/
 -https://parrotsec.org/download/
+-https://www.virtualbox.org/wiki/Downloads
 
 Environments Used:
 -ParrotOS HTB in Virtualbox
 
-  I will be using Wireshark on ParrotOS Hack the Box virtual machine. I mainly use Virtualbox for all my virtual machines. This project would be on name resolution. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
+  I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on name resolution in Wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
 (Cloudshark sample trace file) https://imgur.com/FqFTaau
-On Wireshark, clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
+On Wireshark: clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
 
+With name resolution you can name the numbers on the packets. It can be IP addresses, TCP port values, etc. 
 
+1. Resolving MAC and TCP ports
+In Wireshark: Go to 'Edit' > 'Preferences' > 'Name Resolution' 
 
+Resolve MAC addresses: Layer 2 MAC address resolution that will give organization unique identifier a name. If unchecked, it'll only show the MAC addresses in hexadecimal. I unchecked it and clicked 'OK'. Selected a packet from the Packet List. In Packet Details, clicked the dropdown on 'Ethernet II' and it'll only show the MAC addresses.
 
+Unchecked Resolve MAC addresses screenshots: https://imgur.com/2f33Nzn, https://imgur.com/JoxFUAR, https://imgur.com/DIVZnPy
+Checked Resolve MAC addresses screenshot: https://imgur.com/mwpAp2X
 
+Resolve transport names: If unchecked, it'll show the TCP port numbers, and the client-side ephemeral large number. If checked, it'll show port values with the well known port numbers. Example: http(443)
+
+Unchecked screenshot: https://imgur.com/gZ4RGd5
+Checked screenshot: https://imgur.com/ivvtq99
 
 
 
