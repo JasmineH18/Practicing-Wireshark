@@ -11,6 +11,32 @@ Resources Used:
 Environments Used:
 -ParrotOS HTB in Virtualbox
 
-  I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on name resolution in Wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/e6fb36096dbb) on my ParrotOS VM. 
-(Cloudshark sample trace file) https://imgur.com/FqFTaau
+  I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on how to use Time Column in Wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/6b5d5a370d4f) on my ParrotOS VM. 
+(Cloudshark sample trace file) https://imgur.com/47bBTY5
 On Wireshark: clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
+
+Using Time Column is important for network analysis and forensics. You can look for delays, intrusions, or something else that happen at a specific time. 
+
+I'm going to use filter the packet list to only show TCP. In the Display filter, typed 'tcp' > Clicked the arrow to apply the filter. Screenshot https://imgur.com/n4eGY3h
+
+The Time column is on the left in the packet list. Screenshot https://imgur.com/qOOmcMS. By default, it's going to be set on a running total of time called 'Seconds Since First Captured Packet'. You can notice a time delay if you see a big jump from 5 seconds to 20 seconds. You can also see a problem that happen at 7 in the morning.
+
+Go to 'View' tab > 'Time Display Format'. For 'Time of Day', if you are sending this trace file to someone in a different time zone, Wireshark will use the time zone of the system you are using. Another option is 'UTC Time of Day' format for a consistent view across time zones.   
+
+Time Diplay Format Screenshot https://imgur.com/SSLZmWY
+
+Go to 'View' > 'Time Display Format' > 'Seconds Since First Captured Packet' > Select a packet > Right the time > Select 'Set/Unset Time Reference'. You can start a startwatch on a certain packeta and time the amount of time until another packet using the Set/Uset Time Reference option. I tested on packet 18 and there was a response and I can see the amount of time it took to get that response back. 
+
+Set/Unset Time Reference Screenshots https://imgur.com/Gdm0rmI, https://imgur.com/ObPQB9Q
+
+You can Unset multiple time references all at once. Go to 'Edit' tab > Select 'Unset All Time References'
+
+Screenshots: https://imgur.com/6HgY5wt, https://imgur.com/iCyTExL
+
+TCP conversations are multi-threaded with more than one SYN or conversation happening at once. There are three TCP retransmission in the packet list, which means the delta time would not be useful. Clicked the TCP dropdown in the packet details > Dropdown for 'Timestamps' > 'Time since previous frame in this TCP stream'. It means it's context based. Within this conversation, this is the time from this packet to the one previous in this thread. It is useful to apply it as a column. Right clicked 'Time since previous frame in this TCP stream' > 'Apply as Column'.   
+
+Sreenshot https://imgur.com/ufj5o5a, https://imgur.com/FZumu56, https://imgur.com/cECa7CI
+
+Right clicked 'Time since previous frame in this TCP stream' column > 'Edit Column' > Changed the name to 'TCP Stream' > Dragged 'TCP Stream' column next to the 'Time' column. Clicked 'TCP Stream' to have it be sorted. You'll be able to see larger delays from a server that are in that context.
+
+Screenshots: https://imgur.com/W74q1g8, https://imgur.com/nNfhU3J
