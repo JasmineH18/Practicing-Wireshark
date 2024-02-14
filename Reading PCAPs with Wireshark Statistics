@@ -11,7 +11,7 @@ Environments Used:
 -ParrotOS HTB in Virtualbox
 
   I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on how to read pcaps with Wireshark statistics. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/1c710c0fc15e) on my ParrotOS VM. 
-(Cloudshark sample trace file) 
+(Cloudshark sample trace file) https://imgur.com/Ds4dDKj
 On Wireshark: clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
 
 From Wireshark document
@@ -32,6 +32,18 @@ Protocol specific statistics
 Service Response Time between request and response of some protocols.
 Various other protocol specific statistics.
 
+
+Go to 'Statistics' tab > 'Conversations'. Conversation will show me by layer of address how many conversations I have in this trace file. You can see the conversations between Address A and Address B. Especially see the Packets and Bytes. There's two columns called 'Rel Start (Relative start)' and 'Duration'. The grey bar means how long the conversation and where in the trace file did it start.   
+
+Screenshots: https://imgur.com/E4JeRU8, https://imgur.com/vtwKsAs
+
+Rel Start and Duration: Ex. Rel Start 4.602537, Duration 7.6345. The grey bar for Rel Start show is on 4.602. Which means the conversation took 4.6 seconds into the trace file and it lasted for 7.6 seconds. 
+
+Screenshot: https://imgur.com/IoTCLDP
+
+In the IPv4 tab, you'll notice 192.168.0.1, 192.168.0.2, 192.168.0.3, 192.168.0.4, 192.168.0.5, and so on. 
+
+Screenshot: https://imgur.com/gUxEXN1
 
 
 
