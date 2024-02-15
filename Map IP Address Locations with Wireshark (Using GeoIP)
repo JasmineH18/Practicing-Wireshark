@@ -4,20 +4,43 @@ Resources Used:
 -Chris Greer https://www.youtube.com/watch?v=IlVppluWTHw&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ&index=10
 -https://www.wireshark.org/docs/
 -https://www.kali.org/get-kali/#kali-platforms
--https://www.cloudshark.org/captures/a9472fbe700a
+-https://www.cloudshark.org/captures/69ef3fef29ea
 -https://www.virtualbox.org/wiki/Downloads
 -https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en
 
 Environments Used:
 -Kali Linux in Virtualbox
 
-I will be using Wireshark on Kali Linux virtual machine from VirtualBox, as ParrotOS HTB seems to be freezing badly. This project would be on how to map IP address locations with Wireshark using GeoIP. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/a9472fbe700a) on my ParrotOS VM. 
-(Cloudshark sample trace file) https://imgur.com/jOPBxF0
+I will be using Wireshark on Kali Linux virtual machine from VirtualBox, as ParrotOS HTB seems to be freezing badly. This project would be on how to map IP address locations with Wireshark using GeoIP. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/69ef3fef29ea) on my Kali Linux VM. 
+(Cloudshark sample trace file) 
 On Wireshark: clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
 
 I'm going to download GeoIP Lite Databases and it's free.
 
-Went to https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en > Register an account > Created a password > Signed in > Scroll down to 'Database Products and Subscriptions' > 'Download Databases' > Downloaded GeoLite2 ASN, GeoLite2 City, and GeoLite2 Country GZIP files > Unzipped the files
+Went to https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en > Register an account > Created a password > Signed in > Scroll down to 'Database Products and Subscriptions' > 'Download Databases' > Downloaded GeoLite2 ASN, GeoLite2 City, and GeoLite2 Country GZIP files > Unzipped the files. My databases are recent it shows the date from February 13, 2024.
 
 Screenshots: https://imgur.com/jBVYjXv, https://imgur.com/n1Q9sKY, https://imgur.com/BE7Az8y, https://imgur.com/6RlSM92
+
+Opened Wireshark > 'Edit' tab > 'Preferences' > Go to 'Name Resolution' > Clicked 'MaxMind database directories' 'Edit' button > Clicked the '+' symbol and navigated to the folder that contains the three databases > Clicked 'OK'. 
+
+Screenshots: https://imgur.com/4eKBQp9, https://imgur.com/GdcurgP, https://imgur.com/FPKicH5, https://imgur.com/LJfpMqx
+
+I can check any packet coming from outside wolrd that has a public IP address. Selected a packet with a public IP address > Go to packet details > Clicked dropdown for 'Internet Protocol' > 'Source Address' > 'Source GeoIP'. I can see where the public IP address coming from an autonomous system number, a country, a city perspective. I can also see latitude and longitude coordinates.    
+
+Screenshot: https://imgur.com/mkEiCCu
+
+Go to 'Statistics' tab > 'Endpoints' > 'IPv4' tab. I can see the country, city, and the autonomous number.
+
+Screenshots: https://imgur.com/0i9Ogkf, https://imgur.com/cT3EXYf
+
+Clicked on 'Map' > 'Open in browser'. It'll show the locations on the map. It's useful when looking at an attack, cyberattack, I'm being enumerated, etc. The map would be from the date February 13, 2024. Any changes wouldn't reflect for the missing days to today's date. It's best to always have the latest free databases.
+
+Screenshots: https://imgur.com/uhXgcTi, Example from Chris G. https://imgur.com/qHtR3ge
+
+I can use the information from GeoIP and set filters for specific traffic patterns. Going back to the public IP address 'Source GeoIP' from the packet details. Selected and right clicked 'Source GeoIP Country' > 'Prepare as Filter' > 'Selected'. It'll show the display filter and it has United States. You can put any city that GeoIP recognizes and set a filter for it, and add it as a filter button to quickly access it.  
+
+Screenshots: https://imgur.com/yKrUJom, https://imgur.com/HkKdVzN
+
+
+
 
