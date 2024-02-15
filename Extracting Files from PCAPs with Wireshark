@@ -1,1 +1,35 @@
+This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing on your software, hardware, etc. This will improve your skills on a certain subject. Below are the resources and environments I'm using.
+
+Resources Used:
+-Chris Greer https://www.youtube.com/watch?v=OU-A2EmVrKQ&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ
+-https://www.wireshark.org/docs/
+-https://parrotsec.org/download/
+-https://www.cloudshark.org/captures/a9472fbe700a
+-https://www.virtualbox.org/wiki/Downloads
+
+Environments Used:
+-ParrotOS HTB in Virtualbox
+
+  I will be using Wireshark on ParrotOS Hack the Box virtual machine from VirtualBox. This project would be on how to extract files from pcaps in Wireshark. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/a9472fbe700a) on my ParrotOS VM. 
+(Cloudshark sample trace file) https://imgur.com/jOPBxF0
+On Wireshark: clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
+
+I'm going to look at packet number 14 from the trace file. It looks like someone wnat to get a photo, 'Get /images/packet-pioneer-logo-green-blue-white.png'.
+
+Screenshot: https://imgur.com/PmZr2JT
+
+There is an option that needs to be enabled before extracting files. Go to packet details > Right click TCP > 'Protocol Preferences' > Make sure 'Allow Subdissector to reassemble TCP Streams' is checked. This option will allow subdissectors to reassemble TCP streams into one, and avoid it from doing TCP stream one packet at a time.  
+
+Screenshot: https://imgur.com/zcU5Qxp
+
+
+Export Objects:
+Go to 'File' > 'Export Objects'. There are five types of objects that Wireshark can do by default. It can extract DICOM, FTP-DATA, HTTP, IMf, SMB, and TFTP files. You can also extract from different types of files, like executables, binaries, etc. You would have to be careful malware as it can get into your system. Clicked HTTP and it shows two objects Wireshark was able to find and reassemble. Clicked the second object with the file named 'packet-pioneer-logo-green-blue-white.png' > 'Save' > Chose an place to save the file in > 'Save'. Went to the place the file is saved in and opened the file. It shows the image that was extracted from the pcap.   
+
+Screenshots: https://imgur.com/F1YLdzT, https://imgur.com/PjCsPBg, https://imgur.com/WL7jn8W, https://imgur.com/fuwuuUy, https://imgur.com/O2UZLSq, https://imgur.com/3SHKXns
+
+
+TCP Stream:
+
+
 
