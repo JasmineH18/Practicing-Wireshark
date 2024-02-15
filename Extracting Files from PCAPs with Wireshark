@@ -30,6 +30,13 @@ Screenshots: https://imgur.com/F1YLdzT, https://imgur.com/PjCsPBg, https://imgur
 
 
 TCP Stream:
+Another way if you are unable to export an object 
+
+Right clicked the packet number 14, named 'Get /images/packet-pioneer-logo-green-blue-white.png' > 'Follow' > 'TCP Stream'. When you are dealing with clear text protocols or protocols where they are not encrypting the payloads, this is where you can see the data that comprise the file. You may need to save the data from there or 'Show data as' 'raw' and save. It'll put all the packet bytes together.  
+
+Screenshot: https://imgur.com/8C9TXvg, https://imgur.com/xKoysSY
+
+
 
 
 
