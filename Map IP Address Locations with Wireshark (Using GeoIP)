@@ -1,0 +1,23 @@
+This will be a guided project. Guided projects are hands on training. You follow what the teacher is doing on your software, hardware, etc. This will improve your skills on a certain subject. Below are the resources and environments I'm using.
+
+Resources Used:
+-Chris Greer https://www.youtube.com/watch?v=IlVppluWTHw&list=PLW8bTPfXNGdC5Co0VnBK1yVzAwSSphzpJ&index=10
+-https://www.wireshark.org/docs/
+-https://www.kali.org/get-kali/#kali-platforms
+-https://www.cloudshark.org/captures/a9472fbe700a
+-https://www.virtualbox.org/wiki/Downloads
+-https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en
+
+Environments Used:
+-Kali Linux in Virtualbox
+
+I will be using Wireshark on Kali Linux virtual machine from VirtualBox, as ParrotOS HTB seems to be freezing badly. This project would be on how to map IP address locations with Wireshark using GeoIP. Downloaded and saved Chris Greer sample trace file (https://www.cloudshark.org/captures/a9472fbe700a) on my ParrotOS VM. 
+(Cloudshark sample trace file) https://imgur.com/jOPBxF0
+On Wireshark: clicked File > Open > selected the folder the file saved on, clicked Open. https://imgur.com/zoS5Win
+
+I'm going to download GeoIP Lite Databases and it's free.
+
+Went to https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en > Register an account > Created a password > Signed in > Scroll down to 'Database Products and Subscriptions' > 'Download Databases' > Downloaded GeoLite2 ASN, GeoLite2 City, and GeoLite2 Country GZIP files > Unzipped the files
+
+Screenshots: https://imgur.com/jBVYjXv, https://imgur.com/n1Q9sKY, https://imgur.com/BE7Az8y, https://imgur.com/6RlSM92
+
