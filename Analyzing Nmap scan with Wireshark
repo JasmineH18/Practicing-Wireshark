@@ -1,7 +1,6 @@
 Resources Used:
 -https://www.virtualbox.org/wiki/Downloads
 -https://www.kali.org/get-kali/#kali-platforms
--Networkchuck https://www.youtube.com/watch?v=4t4kBkMsDbQ
 -https://nmap.org/book/man.html
 -https://www.wireshark.org/docs/
 
@@ -9,5 +8,37 @@ Environments Used:
 -Kali Linux in Virtualbox
 -Wireshark in Kali Linux
 
-Started Kali Linux virtual machine and opened Nmap and Wireshark. This project will be on analyzing the port scan with Wireshark.
+Started Kali Linux virtual machine and opened Nmap and Wireshark. This project will be on analyzing Nmap scan with Wireshark.
+
+TCP Connect Scan
+I'll do a full open scan, but will not specify a port. By default, it'll scan the top 1000 ports or popular ports. Only scanning one network. 
+
+In the terminal:
+sudo nmap -sT 45.33.32.156 -v
+
+Screenshot: 
+
+I'll run the scan again with Wireshark. In Wireshark, clicked the shark fin icon to start the capture. Hovering over it with the mouse will show 'Start capturing packets'. 
+
+The packets will start to show in Wireshark. In displayed filtered, types ip.addr == 45.33.32.156. You can see the source IP, Destination IP, port number, SYN/ACK, and other details.
+
+Screenshots: 
+
+
+Stealth Scan
+I'll do a half scan without the port number and scanning one network. Wireshark will capture the packets.
+
+In the terminal:
+sudo nmap -sS 45.33.32.156 -v
+
+Screenshot: 
+
+Adjusted the filter to show TCP conversation. Right clicked a packet > 'Conversation Filter' > 'TCP'
+You can see the source IP, Destination IP, port number, SYN/ACK, and other details. It does not complete the TCP connection
+
+Screenshots: 
+
+
+
+
 
