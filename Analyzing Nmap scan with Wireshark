@@ -16,13 +16,13 @@ I'll do a full open scan, but will not specify a port. By default, it'll scan th
 In the terminal:
 sudo nmap -sT 45.33.32.156 -v
 
-Screenshot: 
+Screenshot: https://imgur.com/TX63Qng
 
 I'll run the scan again with Wireshark. In Wireshark, clicked the shark fin icon to start the capture. Hovering over it with the mouse will show 'Start capturing packets'. 
 
 The packets will start to show in Wireshark. In displayed filtered, types ip.addr == 45.33.32.156. You can see the source IP, Destination IP, port number, SYN/ACK, and other details.
 
-Screenshots: 
+Screenshots: https://imgur.com/QfMRF5r, https://imgur.com/2ibZEs8
 
 
 Stealth Scan
@@ -31,12 +31,12 @@ I'll do a half scan without the port number and scanning one network. Wireshark 
 In the terminal:
 sudo nmap -sS 45.33.32.156 -v
 
-Screenshot: 
+Screenshot: https://imgur.com/XkLxnRh
 
 Adjusted the filter to show TCP conversation. Right clicked a packet > 'Conversation Filter' > 'TCP'
 You can see the source IP, Destination IP, port number, SYN/ACK, and other details. It does not complete the TCP connection
 
-Screenshots: 
+Screenshots: https://imgur.com/80iGUs5, https://imgur.com/NF9w5pr
 
 
 
